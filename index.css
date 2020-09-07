@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #300407;
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: logo 1s ease forwards 3s;
+}
+
+#logo path:nth-child(1) {
+  animation: letter-anim 2s ease forwards 0.9s;
+}
+
+#logo path:nth-child(2) {
+  animation: letter-anim 2s ease forwards 0.6s;
+}
+
+#logo path:nth-child(3) {
+  animation: letter-anim 2s ease forwards;
+}
+
+
+
+.main-container {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 5rem;
+  width: 100%;
+  background-color: #300407;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header svg{
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2rem;
+  margin-top: 0.3rem;
+  animation: header-logo 2s ease;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+nav ul li{
+  padding: 0.5rem;
+  padding-top: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  visibility: hidden;
+  cursor: pointer;
+  animation-duration: 3s;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.animate__animated { 
+  visibility: visible !important;
+}
+
+nav ul li:nth-child(1) {
+  animation-delay: 0.8s;
+}
+nav ul li:nth-child(2){
+  animation-delay: 0.7s;
+
+}
+nav ul li:nth-child(3){
+  animation-delay: 0.6s;
+}
+nav ul li:nth-child(4){
+  animation-delay: 0.5s;
+
+}
+nav ul li:nth-child(5){
+  animation-delay: 0.4s;
+
+}
+nav ul li:nth-child(6){
+  animation-delay: 0.3s;
+
+}
+nav ul li:nth-child(7){
+  animation-delay: 0.2s;
+  padding-right: 2.5rem;
+}
+
+nav ul li:nth-child(8){
+  animation-delay: 0.1s;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  margin-right: 1.5rem;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+.landing-page {
+  background-color: #300407;
+
+}
+
+.about-me {
+  background-color: #4A0609;
+}
+
+.education {
+  background-color: #1C0608;
+
+}
+
+.skills {
+  background-color: #5C3D27;
+
+}
+
+.work-experience {
+  background-color: #5E4723;
+
+}
+
+.hobbies {
+  background-color: #581C13;
+
+}
+
+.my-favorite {
+  background-color: #1C1412;
+
+}
+
+.contact {
+  background-color: #301E10;
+
+}
+
+@keyframes letter-anim {
+  0%{
+    stroke-dasharray: 0 50%;
+  }
+  100%{
+    stroke-dasharray: 50% 0;
+  }
+}
+
+@keyframes logo {
+  0%{
+    top: 50%;
+    left: 50%;
+
+  }
+  40%{
+    transform: scale(0.20);
+    opacity: 0.7;
+  }
+  99%{
+    top: 2.5rem;
+    left: 3.5rem;
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.1;
+  }
+  100%{
+    display: none;
+  }
+}
+
+@keyframes header-logo {
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0.6;
+  }
+  80%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 1;
+  }
+}
