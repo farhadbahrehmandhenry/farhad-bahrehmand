@@ -7,9 +7,9 @@ $(window).load(function() {
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', () => {
-      let y = 1 + (window.scrollY || window.pageYOffset) / 150;
+      var y = 1 + (window.scrollY || window.pageYOffset) / 150;
       y = y < 1 ? 1 : y;
-      const [r, g, b] = [red/y, green/y, blue/y].map(Math.round);
+
       var color = '#300407';
 
       if (y >= 7 && y < 13) color = '#4A0609';
@@ -21,8 +21,49 @@ $(window).load(function() {
       else if (y >= 44.22) color = '#301E10';
 
       header.style.backgroundColor = color;
+    });
+
+    var burger = document.querySelector('.burger');
+    var navItems = document.querySelectorAll('.nav-items li');
+    var nav = document.querySelector('.nav-items');
+
+    navItems.forEach((item, index) => {
+      if (item.style.animation) {
+        item.style.animation = '';
+      }
+      else {
+        item.style.animation = `navItemFadeIn 2s ease forwards ${(1 - (index / 7)) + 0.2}s`
+      }
     })
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+
+      navItems.forEach((item, index) => {
+        if (item.style.animation) {
+          item.style.animation = '';
+        }
+        else {
+          item.style.animation = `navItemFadeIn 2s ease forwards ${(index / 7) + 0.5}s`
+        }
+      })
+
+      burger.classList.toggle('toggle');
+    });
+
+    var navLogo = document.querySelector('#nav-logo');
+
+    navLogo.addEventListener('click', () => window.location.reload());
+
+
+    var hi = document.querySelector('.hi');
+    var name = document.querySelector('.name');
+    var info = document.querySelector('.info');
+
+    hi.style.animation = `landingPageHi 2s ease forwards 0.3`
+    name.style.animation = `landingPageName 2s ease forwards 0.6`
+    info.style.animation = `landingPageInfo 2s ease forwards 0.9`
+
 
   }, 3000);
 });
-
