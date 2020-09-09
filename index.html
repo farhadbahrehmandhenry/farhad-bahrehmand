@@ -15,37 +15,25 @@
     <div class="main-container">
       <header class="header"></header>
       <div class='share'></div>
-      <section data-index='0' class="landing-page">
-          <h5 class="hi">Hi, my name is:</h5>
-          <h3 class="name">Farhad Bahrehmand</h3>
-          <h4 class="info">I'm a software engineer and a computer science student based in Seattle, WA. my passion is to learn new skills and build things.</h4>
-      </section>
-      <section data-index='1' class="about-me">
-        <h3>about</h3>
-      </section>
-      <section data-index='2' class="education">
-        <h3>education</h3>
-      </section>
-      <section data-index='3' class="skills">
-        <h3>skills</h3>
-
-      </section>
-      <section data-index='4' class="work-experience">
-        <h3>experience</h3>
-
-      </section>
-      <section data-index='5' class="hobbies"> 
-        <h3>hobbies</h3>
-
-      </section>
-      <section data-index='6' class="my-favorite">
-        <h3>favorite</h3>
+      <section data-index='0' class="landing-page"></section>
+      <section data-index='1' class="about-me"></section>
+      <section data-index='2' class="education"></section>
+      <section data-index='3' class="skills"></section>
+      <section data-index='4' class="work-experience"></section>
+      <section data-index='5' class="hobbies"></section>
+      <section data-index='6' class="my-favorite"></section>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type='text/javascript'>
       $(() => $('.header').load('./htmls/header.html'));
       $(() => $('.share').load('./htmls/share.html'));
-
+      $(() => $('.landing-page').load('./htmls/landing-page.html'));
+      $(() => $('.about-me').load('./htmls/about-me-page.html'));
+      $(() => $('.education').load('./htmls/education-page.html'));
+      $(() => $('.skills').load('./htmls/skills-page.html'));
+      $(() => $('.work-experience').load('./htmls/work-experience-page.html'));
+      $(() => $('.hobbies').load('./htmls/hobbies-page.html'));
+      $(() => $('.my-favorite').load('./htmls/my-favorite-page.html'));
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
