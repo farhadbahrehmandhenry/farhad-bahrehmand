@@ -1,52 +1,166 @@
+import jump from './node_modules/jump.js/dist/jump.module.js';
+
 $(window).load(function() {
   setTimeout(() => {
     $("#logo").fadeOut("slow");
     $(".main-container").css("display", "flex");
 
-    const [red, green, blue] = [69, 111, 225];
-    const header = document.querySelector('.header');
-
-    window.addEventListener('scroll', () => {
-      var y = 1 + (window.scrollY || window.pageYOffset) / 150;
-      y = y < 1 ? 1 : y;
-
-      var color = '#300407';
-
-      if (y >= 7 && y < 13) color = '#4A0609';
-      else if (y >= 13 && y < 19.5) color = '#1C0608';
-      else if (y >= 19.5 && y < 26) color = '#5C3D27';
-      else if (y >= 26 && y < 32) color = '#5E4723';
-      else if (y >= 32 && y < 38) color = '#581C13';
-      else if (y >= 38 && y < 44.22) color = '#1C1412';
-      else if (y >= 44.22) color = '#301E10';
-
-      header.style.backgroundColor = color;
-    });
-
+    var header = document.querySelector('.header');
     var burger = document.querySelector('.burger');
     var navItems = document.querySelectorAll('.nav-items li');
     var nav = document.querySelector('.nav-items');
+    var landingPage = document.querySelector('.landing-page');
+    var aboutPage = document.querySelector('.about-me');
+    var educationPage = document.querySelector('.education');
+    var skillsPage = document.querySelector('.skills');
+    var experiencePage = document.querySelector('.work-experience');
+    var hobbiesPage = document.querySelector('.hobbies');
+    var favoritePage = document.querySelector('.my-favorite');
+    var body = document.querySelector('body');
+    var sections = document.querySelectorAll('section');
+    var toggleShare = document.querySelector('.toggle-share');
+    var share = document.querySelector('.share');
+    var socialLinks = document.querySelector('.social-links');
+    var shareToggle = document.querySelector('.toggle-share');
+    var about = document.querySelector('.about-me-link');
+    var education = document.querySelector('.education-link');
+    var skills = document.querySelector('.skills-link');
+    var experience = document.querySelector('.work-experience-link');
+    var hobbies = document.querySelector('.hobbies-link');
+    var favorite = document.querySelector('.my-favorite-link');
 
-    navItems.forEach((item, index) => {
-      if (item.style.animation) {
-        item.style.animation = '';
-      }
-      else {
-        item.style.animation = `navItemFadeIn 2s ease forwards ${(1 - (index / 7)) + 0.2}s`
-      }
+    var colors = {
+      'landing-page': '#300407',
+      'about-me': '#4A0609', 
+      'education': '#1C0608', 
+      'skills': '#5C3D27', 
+      'work-experience': '#5E4723', 
+      'hobbies': '#581C13', 
+      'my-favorite': '#1C1412', 
+    };
+
+    var shareToggleColors = {
+      'landing-page': '#51293B',
+      'about-me': '#6B384B', 
+      'education': '#633650', 
+      'skills': '#4F2D4A', 
+      'work-experience': '#593D59', 
+      'hobbies': '#5E405A',
+      'my-favorite': '#7A5E7A', 
+    };
+
+    var shareColors = {
+      'landing-page': '#997B66',
+      'about-me': '#D08C60', 
+      'education': '#c39e81', 
+      'skills': '#95765a', 
+      'work-experience': '#D9AE94', 
+      'hobbies': '#9B9B7A', 
+      'my-favorite': '#797D62', 
+    };
+
+    var options = {
+      threshold: 0.9
+    };
+
+    var observer = new IntersectionObserver(navCheck, options);
+
+    function navCheck(entries) {
+      entries.forEach(entry => {
+        var className = entry.target.className;
+
+        if (entry.isIntersecting) {
+          header.style.backgroundColor = colors[className];
+          shareToggle.style.backgroundColor = shareToggleColors[className];
+          share.style.backgroundColor = shareColors[className];
+        }
+      });
+    }
+
+    sections.forEach(section => {
+      observer.observe(section);
     })
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 775) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    if (!nav.classList.contains('nav-active')) {
+      navItems.forEach((item, index) => {
+        item.style.animation = `navItemFadeIn 2s ease forwards ${(1 - (index / 7)) + 0.2}s`
+      })
+    }
+
+
+    favoritePage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    aboutPage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    educationPage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    skillsPage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    experiencePage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    hobbiesPage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
+
+    landingPage.addEventListener('click', () => {
+      if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        body.style.overflowY = 'scroll';
+      }
+    });
 
     burger.addEventListener('click', () => {
       nav.classList.toggle('nav-active');
 
-      navItems.forEach((item, index) => {
-        if (item.style.animation) {
-          item.style.animation = '';
-        }
-        else {
-          item.style.animation = `navItemFadeIn 2s ease forwards ${(index / 7) + 0.5}s`
-        }
-      })
+      if (nav.classList.contains('nav-active')) {
+        body.style.overflowY = 'hidden';
+      }
+      else {
+        body.style.overflowY = 'scroll';
+      }
 
       burger.classList.toggle('toggle');
     });
@@ -64,6 +178,42 @@ $(window).load(function() {
     name.style.animation = `landingPageName 2s ease forwards 0.6`
     info.style.animation = `landingPageInfo 2s ease forwards 0.9`
 
+    toggleShare.addEventListener('click', () => {
+      share.classList.toggle('active');
+      socialLinks.classList.toggle('active');
+    });
+
+    about.addEventListener('click', () => {
+      jump('.about-me', {
+        duration: 1000
+      })
+    })
+    education.addEventListener('click', () => {
+      jump('.education', {
+        duration: 2000,
+        // callback: () => {}
+      })
+    })
+    skills.addEventListener('click', () => {
+      jump('.skills', {
+        duration: 2000
+      })
+    })
+    experience.addEventListener('click', () => {
+      jump('.work-experience', {
+        duration: 2000
+      })
+    })
+    hobbies.addEventListener('click', () => {
+      jump('.hobbies', {
+        duration: 2000
+      })
+    })
+    favorite.addEventListener('click', () => {
+      jump('.my-favorite', {
+        duration: 2000
+      })
+    })
 
   }, 3000);
 });
