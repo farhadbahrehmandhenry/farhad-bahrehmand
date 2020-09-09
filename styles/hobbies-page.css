@@ -1,0 +1,7 @@
+.hobbies {
+  background-color: #581C13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

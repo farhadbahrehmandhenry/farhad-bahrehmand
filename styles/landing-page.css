@@ -1,0 +1,66 @@
+.landing-page {
+  background-color: #300407;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hi, .name, .info {
+  width: 50%;
+  opacity: 0.8;
+  z-index: 0;
+  opacity: 0;
+}
+
+.hi {
+  padding-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3.5em;
+}
+
+.info {
+  min-width: 10rem;
+  left: 7rem;
+}
+
+@media only screen and (max-width: 775px) {
+  .name {
+    font-size: 2rem;
+  }
+}
+
+@keyframes landingPageHi {
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+@keyframes landingPageName {
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 0.8;
+    transform: translateY(40px);
+  }
+}
+
+@keyframes landingPageInfo {
+  0%{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100%{
+    opacity: 0.8;
+    transform: translateY(50px);
+  }
+}

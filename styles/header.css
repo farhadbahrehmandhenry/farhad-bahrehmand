@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 5rem;
+  width: 100%;
+  background-color: #300407;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Pangolin', cursive;
+  z-index: 5;
+}
+
+.header svg {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2.7rem;
+  margin-top: 0.3rem;
+  animation: header-logo 2s ease;
+}
+
+@media only screen and (max-width: 775px) {
+  .header {
+    position: fixed;
+  }
+}
+
+@keyframes header-logo {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  55%{
+    opacity: 0.6;
+  }
+  75%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,142 @@
+.share {
+  position: fixed;
+  bottom: 5%;
+  left: 2rem;
+  width: 50px;
+  height: 50px;
+  transition: 0.2s;
+  z-index: 4;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 50%;
+  animation: shareFadeIn 2s ease-in forwards;
+}
+
+.share.active {
+  width: 40px;
+  height: 29rem;
+  border-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.toggle-share {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 10;
+}
+ 
+.share .toggle-share:before {
+content: '\f1e0';
+position: absolute;
+width: 100%;
+height: 100%;
+text-align: center;
+line-height: 50px;
+font-family: fontAwesome;
+color: #fff;
+font-size: 24px;
+opacity: 0.7
+}
+
+.share.active .toggle-share:before {
+  content: '\f00d';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-family: fontAwesome;
+  color: #fff;
+  font-size: 24px;
+}
+
+.social-links {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  z-index: 4;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-links.active {
+  display: flex;
+}
+.social-links li {
+  z-index: 4;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  animation: socialLink 1s ease-in;
+  opacity: 0.8;
+}
+
+.social-links li:nth-child(1) {
+  margin-top: 1rem;
+}
+
+.social-links li:nth-child(4) {
+  transform: rotate(-90deg);
+  margin-top: 7rem;
+  border-bottom: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.social-links li:nth-child(4):hover {
+  color: #B23121;
+}
+
+.fa-linkedin, .fa-github, .fa-instagram {
+  color: purple;
+}
+
+.social-links li:nth-child(4) {
+  color: purple;
+}
+
+.fa-linkedin:hover {
+  color: #007bb5;
+}
+
+.fa-github:hover {
+  color: black;
+}
+
+.fa-instagram:hover {
+  color: #e4405f;
+}
+
+@keyframes shareFadeIn {
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}
+
+@keyframes socialLink {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.8;
+  }
+}

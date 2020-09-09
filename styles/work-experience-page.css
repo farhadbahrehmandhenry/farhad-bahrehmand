@@ -1,0 +1,7 @@
+.work-experience {
+  background-color: #5E4723;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

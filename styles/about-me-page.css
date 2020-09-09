@@ -1,0 +1,7 @@
+.about-me {
+  background-color: #4A0609;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
