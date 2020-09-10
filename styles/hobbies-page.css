@@ -1,7 +1,138 @@
+@import "compass/css3";
+
 .hobbies {
   background-color: #581C13;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+::selection {
+  background-color: #7A5E7A;
+}
+
+.habbies-tabbed {
+  padding-top: 0.5rem;
+  width: 500px;
+  margin: 50px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 2rem
+}
+
+.habbies-tabbed > input {
+  display: none;
+}
+
+.habbies-tabbed > label {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color .3s;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.habbies-tabbed > label:hover {
+  background: #7A5E7A;
+}
+
+.habbies-tabbed > input:checked + label {
+  border-bottom: 2px solid red;
+}
+
+.habbies-tabs {
+  clear: both;
+  perspective: 600px;
+}
+
+.habbies-tabs > div {
+  width: 100%;
+  position: absolute;
+  /* border: 2px solid #4F2D4A; */
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0;
+}
+
+.habbies-tabs > div h2{
+  display: none;
+}
+
+.habbies-tabs > div ul li{
+  opacity: 0.8;
+  font-weight: normal;
+  font-size: 0.7rem;
+  padding-bottom: 0.7;
+}
+
+#habbies-tab-nav-1:checked ~ .habbies-tabs > div:nth-of-type(1),
+#habbies-tab-nav-2:checked ~ .habbies-tabs > div:nth-of-type(2),
+#habbies-tab-nav-3:checked ~ .habbies-tabs > div:nth-of-type(3),
+#habbies-tab-nav-4:checked ~ .habbies-tabs > div:nth-of-type(4){
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.ml9 {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.5em;
+  opacity: 0.7;
+  padding-top: 2rem;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+@media screen and (max-width: 775px) {
+  .habbies-tabbed { width: 400px }
+  .habbies-tabbed > label { display: none }
+  .habbies-tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 0.8;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+    font-size: 0.6rem;
+    opacity: 0.8rem;
+  }
+  .habbies-tabs > div h2 {
+    border-bottom: 2px solid #7A5E7A;
+    padding-bottom: .5em;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .habbies-tabbed {
+    width: 100%;
+    margin-left: 8rem;
+  }
+
+  .habbies-tabs > div {
+    width: 90%;
+  }
 }

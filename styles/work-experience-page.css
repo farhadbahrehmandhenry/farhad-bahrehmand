@@ -5,3 +5,52 @@
   justify-content: center;
   align-items: center;
 }
+
+.ml9 {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.5em;
+  opacity: 0.7;
+  padding-top: 2rem;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+.experience-info {
+  margin-top: 2rem;
+  width: 700px;
+}
+
+.experience-info ul{
+  margin-top: 2rem;
+}
+
+.experience-info p{
+  font-size: 0.6rem;
+  padding-top: 0.3rem;
+}
+
+.experience-info ul li{
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 950px) {
+  .experience-info, .work-experience .ml9 {
+    width: 100%;
+    margin-left: 6rem;
+  }
+}

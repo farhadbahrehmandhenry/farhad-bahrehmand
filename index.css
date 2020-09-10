@@ -46,10 +46,21 @@ body {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
 section {
   min-height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+  padding-top: 8rem;
+}
+
+.skills{
+  padding-top: 15rem;
+}
+
+.work-experience{
+  padding-bottom: 15rem;
 }
 
 @media only screen and (max-width: 775px) {

@@ -5,3 +5,71 @@
   justify-content: center;
   align-items: center;
 }
+
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+.about-me-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-paragraphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  padding-left: 0;
+  width: 30rem;
+}
+
+.about-me-paragraphs p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  opacity: 0.8;
+  padding-left: 1rem;
+}
+
+.about-me-image {
+  width: 300px;
+  height: 350px;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 775px) {
+  .about-me-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-me-paragraphs {
+    width: 100%;
+    min-width: 10rem;
+  }
+
+  .about-me-image {
+    width: 230px;
+    height: 270px;
+  }
+}

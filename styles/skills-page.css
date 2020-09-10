@@ -2,6 +2,136 @@
   background-color: #5C3D27;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+@import "compass/css3";
+
+::selection {
+  background-color: #4F2D4A;
+}
+
+.tabbed {
+  padding-top: 0.5rem;
+  width: 450px;
+  margin: 50px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 0.5rem
+}
+
+.tabbed > input {
+  display: none;
+}
+
+.tabbed > label {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color .3s;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.tabbed > label:hover {
+  background: #4F2D4A;
+}
+
+.tabbed > input:checked + label {
+  border-bottom: 2px solid red;
+}
+
+.tabs {
+  clear: both;
+  perspective: 600px;
+}
+
+.tabs > div {
+  width: 100%;
+  position: absolute;
+  /* border: 2px solid #4F2D4A; */
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0;
+}
+
+.tabs > div h2{
+  display: none;
+}
+
+.tabs > div ul li{
+  opacity: 0.8;
+  font-weight: normal;
+  font-size: 0.7rem;
+  padding-bottom: 0.7;
+}
+
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4){
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+.ml9 {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.5em;
+  opacity: 0.7;
+  padding-top: 2rem;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+@media screen and (max-width: 775px) {
+  .tabbed { width: 400px }
+  .tabbed > label { display: none }
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 0.8;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+    font-size: 0.6rem;
+    opacity: 0.8rem;
+  }
+  .tabs > div h2 {
+    border-bottom: 2px solid #4F2D4A;
+    padding-bottom: .5em;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tabbed {
+    width: 100%;
+    margin-left: 8rem;
+  }
+  .tabs > div {
+    width: 90%;
+  }
 }

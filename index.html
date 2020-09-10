@@ -8,14 +8,13 @@
     <link rel="stylesheet" text="text/css" href="./styles/navbar.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/landing-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/about-me-page.css"></link>
-    <link rel="stylesheet" text="text/css" href="./styles/education-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/skills-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/work-experience-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/hobbies-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/my-favorite-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/share.css"></link>
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Pangolin&display=swap" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
   </head>
   <body>
@@ -27,21 +26,20 @@
     <div class="main-container">
       <header class="header"></header>
       <div class='share'></div>
-      <section data-index='0' class="landing-page"></section>
-      <section data-index='1' class="about-me"></section>
-      <section data-index='2' class="education"></section>
-      <section data-index='3' class="skills"></section>
-      <section data-index='4' class="work-experience"></section>
-      <section data-index='5' class="hobbies"></section>
-      <section data-index='6' class="my-favorite"></section>
+      <section class="landing-page"></section>
+      <section class="about-me"></section>
+      <section class="skills"></section>
+      <section class="work-experience"></section>
+      <section class="hobbies"></section>
+      <section class="my-favorite"></section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type='text/javascript'>
       $(() => $('.header').load('./htmls/header.html'));
       $(() => $('.share').load('./htmls/share.html'));
       $(() => $('.landing-page').load('./htmls/landing-page.html'));
       $(() => $('.about-me').load('./htmls/about-me-page.html'));
-      $(() => $('.education').load('./htmls/education-page.html'));
       $(() => $('.skills').load('./htmls/skills-page.html'));
       $(() => $('.work-experience').load('./htmls/work-experience-page.html'));
       $(() => $('.hobbies').load('./htmls/hobbies-page.html'));
@@ -49,10 +47,6 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="./javascripts/index.js"></script>
   </body>
 </html>
-    
-  
-
-  
