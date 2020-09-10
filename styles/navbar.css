@@ -38,7 +38,7 @@ nav ul li {
   animation: navItemFadeIn 2.5s ease;
 }
 
-nav ul li:nth-child(6) {
+nav ul li:nth-child(5) {
   border: 1px solid white;
   border-radius: 0.2rem;
   margin-right: 1.5rem;
@@ -46,7 +46,7 @@ nav ul li:nth-child(6) {
   padding-top: 0.4rem;
 }
 
-nav ul li:nth-child(6):hover {
+nav ul li:nth-child(5):hover {
   background-color: rgb(255, 102, 0);
 }
 
@@ -79,7 +79,7 @@ nav ul li:nth-child(6):hover {
   nav ul li{
     font-size: 0.6rem;
   }
-  nav ul li:nth-child(6) {
+  nav ul li:nth-child(5) {
     padding-top: 0.5rem;
   }
 }
@@ -121,13 +121,13 @@ nav ul li:nth-child(6):hover {
     margin-top: 7rem;
   }
 
-  nav ul li:nth-child(6){
+  nav ul li:nth-child(5){
     border: none;
     color: green;
     height: 2rem;
   }
 
-  nav ul li:nth-child(6):hover {
+  nav ul li:nth-child(5):hover {
     background-color: rgb(255, 102, 0);
   }
 }

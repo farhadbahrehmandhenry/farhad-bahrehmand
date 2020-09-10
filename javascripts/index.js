@@ -14,7 +14,6 @@ $(window).load(function() {
     var skillsPage = document.querySelector('.skills');
     var experiencePage = document.querySelector('.work-experience');
     var hobbiesPage = document.querySelector('.hobbies');
-    var favoritePage = document.querySelector('.my-favorite');
     var body = document.querySelector('body');
     var sections = document.querySelectorAll('section');
     var toggleShare = document.querySelector('.toggle-share');
@@ -25,16 +24,15 @@ $(window).load(function() {
     var skills = document.querySelector('.skills-link');
     var experience = document.querySelector('.work-experience-link');
     var hobbies = document.querySelector('.hobbies-link');
-    var favorite = document.querySelector('.my-favorite-link');
     var navLogo = document.querySelector('#nav-logo');
-    var pages = [favoritePage, aboutPage, skillsPage, experiencePage, hobbiesPage, landingPage];
+    var email = document.querySelector('.email');
+    var pages = [aboutPage, skillsPage, experiencePage, hobbiesPage, landingPage];
     
     var links = [
       {className: '.about-me', anchor: about}, 
       {className: '.skills', anchor: skills},
       {className: '.work-experience', anchor: experience}, 
       {className: '.hobbies',  anchor: hobbies}, 
-      {className: '.my-favorite', anchor: favorite}, 
     ];
 
     var colors = {
@@ -43,7 +41,6 @@ $(window).load(function() {
       'skills': '#5C3D27', 
       'work-experience': '#5E4723', 
       'hobbies': '#581C13', 
-      'my-favorite': '#1C1412', 
     };
 
     var shareToggleColors = {
@@ -52,7 +49,6 @@ $(window).load(function() {
       'skills': '#4F2D4A', 
       'work-experience': '#593D59', 
       'hobbies': '#5E405A',
-      'my-favorite': '#7A5E7A', 
     };
 
     var shareColors = {
@@ -61,7 +57,6 @@ $(window).load(function() {
       'skills': '#95765a', 
       'work-experience': '#D9AE94', 
       'hobbies': '#9B9B7A', 
-      'my-favorite': '#797D62', 
     };
 
     //< change the color of header and share dynamically
@@ -99,13 +94,18 @@ $(window).load(function() {
     }
     //>
 
-    //< close navbar in mobile mode on page click
+    //< close navbar/shareLinks in mobile mode on page click
     pages.forEach(page => {
       page.addEventListener('click', () => {
         if (nav.classList.contains('nav-active')) {
           nav.classList.remove('nav-active');
           burger.classList.remove('toggle');
           body.style.overflowY = 'scroll';
+        }
+
+        if (socialLinks.classList.contains('active')) {
+          share.classList.remove('active');
+          socialLinks.classList.remove('active');
         }
       });
     });
@@ -142,18 +142,39 @@ $(window).load(function() {
     startDate.innerHTML = Math.ceil((now- startProgrammingDate) / (1000 * 3600 * 24));
     //>
 
+    //< animation for each section heading
     function headerAnimation({className}) {
       var textWrapper = document.querySelector(`${className} .ml9 .letters`);
       textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
       
       anime.timeline({loop: false})
-        .add({
-          targets: '.ml9 .letter',
-          scale: [0, 1],
-          duration: 1500,
-          elasticity: 600,
-          delay: (el, i) => 45 * (i+1)
-        }).add({});
+      .add({
+        targets: '.ml9 .letter',
+        scale: [0, 1],
+        duration: 1500,
+        elasticity: 600,
+        delay: (el, i) => 45 * (i+1)
+      }).add({});
     }
+    //>
+
+    //< email copy to clipboard
+    var clipboard = new ClipboardJS(email);
+
+    clipboard.on('success', (e) => {
+      var emailTooltiptext = document.querySelector('.email .tooltiptext');
+      emailTooltiptext.style.display = 'block';
+      emailTooltiptext.style.visibility = 'visible';
+
+      setTimeout(() => {
+        emailTooltiptext.style.display = 'none';
+        emailTooltiptext.style.visibility = 'hidden';
+      }, 1000);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    //>
   }, 3000);
 });
