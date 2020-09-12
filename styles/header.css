@@ -4,11 +4,11 @@
   box-sizing: border-box;
   height: 5rem;
   width: 100%;
-  background-color: #300407;
+  background-color: #8a5a44;
   position: fixed;
   top: 0;
   left: 0;
-  font-family: 'Pangolin', cursive;
+  font-family: 'Nanum Gothic', sans-serif;
   z-index: 5;
 }
 

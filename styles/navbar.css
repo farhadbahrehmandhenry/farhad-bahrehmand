@@ -4,7 +4,8 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-weight: bolder;
 }
 
 .nav-active {
@@ -14,13 +15,17 @@ nav a {
 
 #nav-logo {
   cursor: pointer;
+  animation: logo 2s ease;
+}
+
+#nav-logo:hover {
+  animation: letter-anim 2s ease forwards 0.9s;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  font-family: sans-serif;
-  z-index: 5;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 nav ul li {
@@ -33,17 +38,17 @@ nav ul li {
   font-size: 0.8rem;
   opacity: 0.8;
   height: 1.8rem;
-  font-family: 'Pangolin', cursive;
+  font-family: 'Nanum Gothic', sans-serif;
   opacity: 0;
   animation: navItemFadeIn 2.5s ease;
 }
 
 nav ul li:nth-child(5) {
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 0.2rem;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
-  padding-top: 0.4rem;
+  padding-top: 0.2rem;
 }
 
 nav ul li:nth-child(5):hover {
@@ -55,9 +60,9 @@ nav ul li:nth-child(5):hover {
   content: '';
   left: 0;
   bottom: 0;
-  height: 3px;
+  height: 0.2rem;
   width: 100%;
-  background: white;
+  background: black;
   opacity: 0.7;
   transform: scale(0);
   transform-origin: right;
@@ -69,18 +74,9 @@ nav ul li:nth-child(5):hover {
   transform-origin: left;
 }
 
-@media only screen and (max-width: 875px) {
-  nav ul li{
-    font-size: 0.7rem;
-  }
-}
-
 @media only screen and (max-width: 820px) {
-  nav ul li{
-    font-size: 0.6rem;
-  }
   nav ul li:nth-child(5) {
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
   }
 }
 
@@ -91,10 +87,9 @@ nav ul li:nth-child(5):hover {
     height: 100vh;
     width: 50%;
     top: 0;
-    background-color: #06162D;
+    background-color: #8a5a44;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
     animation: mobileNavBarHide 1s ease;
     transform: translateX(100%);
     transition: transform 0.1s ease-in;
@@ -107,7 +102,6 @@ nav ul li:nth-child(5):hover {
     margin: 1rem;
     height: 1.5rem;
     width: calc(100% - 3rem);
-    font-size: 0.8rem;
     opacity: 0;
     padding-bottom: 1rem;
     max-width: 5rem;
@@ -134,7 +128,6 @@ nav ul li:nth-child(5):hover {
 
 @media only screen and (max-width: 470px) {
   nav ul li{
-    font-size: 0.6rem;
     padding-left: 1rem;
   }
 }
@@ -176,5 +169,30 @@ nav ul li:nth-child(5):hover {
   100%{
     width: 50%;
     height: 100vh;
+  }
+}
+
+@keyframes letter-anim {
+  0%{
+    stroke-dasharray: 0 50%;
+  }
+  100%{
+    stroke-dasharray: 50% 0;
+  }
+}
+
+@keyframes logo {
+  0%{
+    top: 25%;
+    left: 50%;
+  }
+  40%{
+    transform: scale(0.20);
+  }
+  100%{
+    top: 2.5rem;
+    left: 3.5rem;
+    width: 4rem;
+    height: 4rem;
   }
 }

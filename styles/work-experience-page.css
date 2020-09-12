@@ -1,5 +1,5 @@
 .work-experience {
-  background-color: #5E4723;
+  background-color: #C97C5D;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@
 
 .experience-info {
   margin-top: 2rem;
-  width: 700px;
+  width: 40rem;
 }
 
 .experience-info ul{

@@ -1,5 +1,5 @@
 .landing-page {
-  background-color: #300407;
+  background-color: #EEE2DF;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -20,17 +20,28 @@
 .hi {
   padding-bottom: 0.5rem;
   animation: landingPageHi 2s ease forwards 0.3;
+  font-size: 1rem;
+  color: black;
+  border-bottom: 1px solid black;
+  width: 10rem;
 }
 
 .name {
   font-size: 3.5em;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   animation: landingPageName 2s ease forwards 0.6;
+  min-width: 18rem;
+
 }
 
 .info {
   min-width: 10rem;
   animation: landingPageInfo 2s ease forwards 0.9;
   width: 70%;
+  font-size: 1.5em;
+  min-width: 25rem;
 }
 
 @media only screen and (max-width: 775px) {
@@ -38,7 +49,12 @@
     padding-left: 5rem;
   }
   .name {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .hi, .name, .info {
+    position: relative;
+    left: 4rem;
   }
 }
 
@@ -48,7 +64,7 @@
     transform: translateY(100px);
   }
   100%{
-    opacity: 0.8;
+    opacity: 1;
     transform: translateY(0);
   }
 }

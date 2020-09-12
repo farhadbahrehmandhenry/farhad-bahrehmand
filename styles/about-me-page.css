@@ -1,5 +1,5 @@
 .about-me {
-  background-color: #4A0609;
+  background-color: #EED7C5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,8 +51,8 @@
 }
 
 .about-me-image {
-  width: 300px;
-  height: 350px;
+  width: 20rem;
+  height: 22rem;
   padding: 1rem;
 }
 
@@ -66,10 +66,5 @@
   .about-me-paragraphs {
     width: 100%;
     min-width: 10rem;
-  }
-
-  .about-me-image {
-    width: 230px;
-    height: 270px;
   }
 }

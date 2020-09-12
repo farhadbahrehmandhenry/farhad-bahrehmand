@@ -1,5 +1,5 @@
 .skills {
-  background-color: #5C3D27;
+  background-color: #C89F9C;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,8 +14,8 @@
 
 .tabbed {
   padding-top: 0.5rem;
-  width: 450px;
-  margin: 50px;
+  width: 30rem;
+  margin: 1.5rem;
   justify-self: center;
   align-self: center;
   margin-top: 0.5rem
@@ -28,8 +28,7 @@
 .tabbed > label {
   display: block;
   float: left;
-  padding: 12px 20px;
-  margin-right: 5px;
+  padding: 1rem 1.5rem;
   cursor: pointer;
   transition: background-color .3s;
   font-size: 0.8rem;
@@ -46,14 +45,14 @@
 
 .tabs {
   clear: both;
-  perspective: 600px;
+  perspective: 25rem;
 }
 
 .tabs > div {
   width: 100%;
   position: absolute;
   /* border: 2px solid #4F2D4A; */
-  padding: 10px 30px 40px;
+  padding: 1rem;
   line-height: 1.4em;
   opacity: 0;
   transform: rotateX(-20deg);
@@ -109,13 +108,13 @@
   .tabbed { width: 400px }
   .tabbed > label { display: none }
   .tabs > div {
-    width: 400px;
+    width: 25rem;
     border: none;
     padding: 0;
     opacity: 0.8;
     position: relative;
     transform: none;
-    margin-bottom: 60px;
+    margin-bottom: 2rem;
     font-size: 0.6rem;
     opacity: 0.8rem;
   }

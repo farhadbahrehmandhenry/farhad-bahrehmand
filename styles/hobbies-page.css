@@ -1,5 +1,5 @@
 .hobbies {
-  background-color: #581C13;
+  background-color: #B36A5E;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,9 +14,9 @@
 
 .habbies-tabbed {
   padding-top: 0.5rem;
-  width: 800px;
-  height: 500px;
-  margin: 50px;
+  width: 50rem;
+  height: 30rem;
+  margin: 2rem;
   justify-self: center;
   align-self: center;
   margin-top: 1rem;
@@ -29,8 +29,7 @@
 .habbies-tabbed > label {
   display: block;
   float: left;
-  padding: 12px 20px;
-  margin-right: 5px;
+  padding: 1rem 1.5rem;
   cursor: pointer;
   transition: background-color .3s;
   font-size: 0.8rem;
@@ -47,7 +46,7 @@
 
 .habbies-tabs {
   clear: both;
-  perspective: 600px;
+  perspective: 10rem;
 }
 
 .habbies-tabs > div {
@@ -110,7 +109,7 @@
 
 /* Slideshow container */
 .slideshow-container-drawing, .slideshow-container-wood {
-  max-width: 1000px;
+  max-width: 50rem;
   position: relative;
   margin: auto;
 }
@@ -126,20 +125,20 @@
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
+  margin-top: -3rem;
+  padding: 1rem;
+  color: red;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 1rem 1rem 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next-drawing, .next-wood {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 1rem 0 0 1rem;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -149,9 +148,9 @@
 
 /* Number text (1/3 etc) */
 .numbertext-drawing, .numbertext-wood {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  color: black;
+  font-size: 0.8rem;
+  padding: 0.5rem;
   position: absolute;
   top: 0;
 }
@@ -159,9 +158,9 @@
 /* The dots/bullets/indicators */
 .dot-drawing, .dot-wood {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 0.2rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -198,34 +197,28 @@
   margin-top: 1rem;
 }
 
-@media screen and (max-width: 1250px) {
-  .habbies-tabbed {
-    width: 700px;
-  }
-}
-
 @media screen and (max-width: 1150px) {
   .habbies-tabbed {
-    width: 600px;
+    width: 45rem;
   }
 }
 
 @media screen and (max-width: 1050px) {
   .habbies-tabbed {
-    width: 500px;
+    width: 40rem;
   }
 }
 @media screen and (max-width: 950px) {
   .habbies-tabbed {
-    width: 400px;
+    width: 35rem;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .habbies-tabbed {
     width: 100%;
-    min-width: 300px;
-    height: 400px;
+    min-width: 30rem;
+    height: 20rem;
     margin-left: 8rem;
   }
 
@@ -235,20 +228,16 @@
 }
 
 @media (max-width: 600px) {
-  .durationTime, .currentTime {
-    display: none;
-  }
-
   .progress-bar {
-    width: 200px;
+    width: 75%;
     padding-right: 1.5rem;
   }
 
   #play-pause {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    height: 25px;
-    width: 25px;
+    height: 2rem;
+    width: 2rem;
   }
 
   #mute-unmute {
@@ -268,98 +257,84 @@
 }
 
 
-
-
-/* container for music player */
 .container {
   height: 50pt;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4a2419;
+  background-color: #8a5a44;
 }
 
-/* style for play and pause images */
 #play-pause {
-  height: 50px;
-  width: 50px;
+  height: 2.5rem;
+  width: 2.5rem;
   filter: invert(1);
   cursor: pointer;
   z-index: 4;
-  /* font-size: 53px; */
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
 
 #mute-unmute {
-  height: 25px;
-  width: 25px;
+  height: 1.5rem;
+  width: 1.5rem;
   filter: invert(1);
   cursor: pointer;
   z-index: 4;
-  font-size: 53px;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
 
-/* style for current time of the track */
 .currentTime {
-  height: 50px;
-  width: 50px;
+  height: 1.5rem;
+  width: 1.5rem;
   z-index: 4;
-  font-size: 13px;
+  font-size: 0.7rem;
   color: white;
   align-items: center;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
-  padding-top: 0.8rem;
 }
 
-/* style for the total length of the track */
 .durationTime {
-  height: 50px;
-  width: 50px;
+  height: 1.5rem;
+  width: 1.5rem;
   z-index: 4;
-  font-size: 13px;
+  font-size: 0.7rem;
   align-items: center;
   color: red;
-  padding-top: 0.8rem;
 }
 
-/* style for the progress bar */
 #progress-bar {
   -webkit-appearance: none;
   appearance: none;
   z-index: 4;
-  height: 5px;
+  height: 0.3rem;
   width: 70%;
-  border-radius: 30px;
+  border-radius: 0.5rem;
 }
 
-/* style for the progress bar's slider thumb */
 #progress-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  margin-top: -3px;
-  margin-left: 0px;
-  height: 10px;
-  width: 7px;
+  margin-top: -0.2rem;
+  margin-left: 0;
+  height: 0.7rem;
+  width: 0.4rem;
   border: 0;
   background: red;
-  border-radius: 30px;
+  border-radius: 0.2rem;
   cursor: pointer;
 }
 
-/* style for the progress bar's runnable track */
 #progress-bar::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  max-height: 5px;
-  border-radius: 30px;
+  max-height: 0.3rem;
+  border-radius: 0.3rem;
 }
 
-/* style to remove blue shade of the progress bar when clicked on/selected */
 #progress-bar:focus {
   outline: none;
 }

@@ -1,13 +1,7 @@
 import jump from '../node_modules/jump.js/dist/jump.module.js';
 
 $(window).load(function() {
-  $("#logo").fadeOut("slow");
-
-  setTimeout(() => {
-    // $("#logo").fadeOut("slow");
-    // $(".main-container").css("display", "flex");
     var mainContainer = document.querySelector('.main-container');
-    var logo = document.querySelector('#logo');
     var header = document.querySelector('.header');
     var burger = document.querySelector('.burger');
     var navItems = document.querySelectorAll('.nav-items li');
@@ -22,7 +16,6 @@ $(window).load(function() {
     var toggleShare = document.querySelector('.toggle-share');
     var share = document.querySelector('.share');
     var socialLinks = document.querySelector('.social-links');
-    var shareToggle = document.querySelector('.toggle-share');
     var about = document.querySelector('.about-me-link');
     var skills = document.querySelector('.skills-link');
     var experience = document.querySelector('.work-experience-link');
@@ -45,33 +38,31 @@ $(window).load(function() {
     ];
 
     var colors = {
-      'landing-page': '#300407',
-      'about-me': '#4A0609', 
-      'skills': '#5C3D27', 
-      'work-experience': '#5E4723', 
-      'hobbies': '#581C13', 
+      'landing-page': '#EEE2DF',
+      'about-me': '#EED7C5', 
+      'skills': '#C89F9C', 
+      'work-experience': '#C97C5D', 
+      'hobbies': '#B36A5E', 
     };
 
     var shareToggleColors = {
-      'landing-page': '#51293B',
-      'about-me': '#6B384B', 
-      'skills': '#4F2D4A', 
-      'work-experience': '#593D59', 
-      'hobbies': '#5E405A',
+      'landing-page': '#5C374C',
+      'about-me': '#985277', 
+      'skills': '#CE6A85', 
+      'work-experience': '#FF8C61', 
+      'hobbies': '#FAA275',
     };
 
     var shareColors = {
-      'landing-page': '#997B66',
-      'about-me': '#D08C60', 
-      'skills': '#95765a', 
-      'work-experience': '#D9AE94', 
-      'hobbies': '#9B9B7A', 
+      'landing-page': '#33658A',
+      'about-me': '#86BBD8', 
+      'skills': '#758E4F', 
+      'work-experience': '#F6AE2D', 
+      'hobbies': '#F26419', 
     };
 
 
     mainContainer.style.display = 'flex';
-    // logo.fadeOut("slow");
-    logo.style.opacity = 0;
 
     //< change the color of header and share dynamically
     var options = {threshold: 0.9};
@@ -83,7 +74,7 @@ $(window).load(function() {
 
         if (entry.isIntersecting) {
           header.style.backgroundColor = colors[className];
-          shareToggle.style.backgroundColor = shareToggleColors[className];
+          toggleShare.style.backgroundColor = shareToggleColors[className];
           share.style.backgroundColor = shareColors[className];
         }
       });
@@ -347,6 +338,4 @@ $(window).load(function() {
       }
     });
     //>
-
-  }, 2000);
 });
