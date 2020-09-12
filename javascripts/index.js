@@ -1,8 +1,10 @@
 import jump from '../node_modules/jump.js/dist/jump.module.js';
 
 $(window).load(function() {
+  $("#logo").fadeOut("slow");
+
   setTimeout(() => {
-    $("#logo").fadeOut("slow");
+    // $("#logo").fadeOut("slow");
     // $(".main-container").css("display", "flex");
     var mainContainer = document.querySelector('.main-container');
     var logo = document.querySelector('#logo');
