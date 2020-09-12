@@ -29,6 +29,7 @@
   0%{
     top: 50%;
     left: 50%;
+    opacity: 1;
   }
   40%{
     transform: scale(0.20);
@@ -50,8 +51,10 @@
 @keyframes letter-anim {
   0%{
     stroke-dasharray: 0 50%;
+    opacity: 1;
   }
   100%{
     stroke-dasharray: 50% 0;
+    opacity: 0.2;
   }
 }
