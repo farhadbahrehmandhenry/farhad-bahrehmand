@@ -3,8 +3,9 @@ import jump from '../node_modules/jump.js/dist/jump.module.js';
 $(window).load(function() {
   setTimeout(() => {
     $("#logo").fadeOut("slow");
-    $(".main-container").css("display", "flex");
-
+    // $(".main-container").css("display", "flex");
+    var mainContainer = document.querySelector('.main-container');
+    var logo = document.querySelector('#logo');
     var header = document.querySelector('.header');
     var burger = document.querySelector('.burger');
     var navItems = document.querySelectorAll('.nav-items li');
@@ -64,6 +65,11 @@ $(window).load(function() {
       'work-experience': '#D9AE94', 
       'hobbies': '#9B9B7A', 
     };
+
+
+    mainContainer.style.display = 'flex';
+    // logo.fadeOut("slow");
+    logo.style.opacity = 0;
 
     //< change the color of header and share dynamically
     var options = {threshold: 0.9};
