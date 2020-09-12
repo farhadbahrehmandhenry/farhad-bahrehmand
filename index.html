@@ -12,6 +12,8 @@
     <link rel="stylesheet" text="text/css" href="./styles/work-experience-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/hobbies-page.css"></link>
     <link rel="stylesheet" text="text/css" href="./styles/share.css"></link>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Pangolin&display=swap" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
@@ -23,26 +25,309 @@
       <path d="M464.656 236.863L269.788 17.3414C253.675 -0.809884 225.325 -0.809879 209.212 17.3414L14.3437 236.863C-8.84685 262.988 9.69918 304.25 44.6318 304.25H434.368C469.301 304.25 487.847 262.988 464.656 236.863ZM215.195 22.6524C228.125 8.08648 250.875 8.08648 263.805 22.6524L458.674 242.174C477.283 263.138 462.401 296.25 434.368 296.25H44.6318C16.5994 296.25 1.71682 263.138 20.3265 242.174L215.195 22.6524Z" stroke="#FFFDFD" stroke-width="7"/>
     </svg>
     <div class="main-container">
-      <header class="header"></header>
-      <div class='share'></div>
-      <section class="landing-page"></section>
-      <section class="about-me"></section>
-      <section class="skills"></section>
-      <section class="work-experience"></section>
-      <section class="hobbies"></section>
+      <header class="header">
+        <svg id='nav-logo' width="479" viewBox="0 0 479 308" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M318.719 157C325.938 157 332.359 157.633 337.984 158.898C343.656 160.164 348.438 161.922 352.328 164.172C356.266 166.422 359.266 169.141 361.328 172.328C363.391 175.469 364.422 178.938 364.422 182.734V193C364.422 197.031 363.625 200.289 362.031 202.773C360.484 205.258 358.328 207.25 355.562 208.75C357.859 209.406 359.969 210.25 361.891 211.281C363.859 212.312 365.523 213.578 366.883 215.078C368.289 216.531 369.367 218.242 370.117 220.211C370.914 222.133 371.312 224.359 371.312 226.891V240.672C371.312 244.469 369.93 247.961 367.164 251.148C364.398 254.289 360.625 257.008 355.844 259.305C351.062 261.602 345.484 263.383 339.109 264.648C332.734 265.914 325.938 266.547 318.719 266.547C314.688 266.547 310.562 266.383 306.344 266.055C302.125 265.773 298.023 265.375 294.039 264.859C290.102 264.344 286.398 263.758 282.93 263.102C279.461 262.445 276.484 261.766 274 261.062V162.344C276.484 161.641 279.461 160.984 282.93 160.375C286.398 159.719 290.102 159.156 294.039 158.688C298.023 158.172 302.125 157.773 306.344 157.492C310.562 157.164 314.688 157 318.719 157ZM318.156 218.453C315.625 218.453 313.094 218.477 310.562 218.523C308.031 218.523 305.57 218.594 303.18 218.734C300.836 218.828 298.586 218.992 296.43 219.227C294.273 219.461 292.328 219.766 290.594 220.141V246.859C291.531 247.188 292.727 247.562 294.18 247.984C295.68 248.406 297.555 248.805 299.805 249.18C302.055 249.555 304.75 249.883 307.891 250.164C311.031 250.398 314.734 250.516 319 250.516C324.25 250.516 328.961 250.094 333.133 249.25C337.352 248.406 340.891 247.281 343.75 245.875C346.656 244.469 348.883 242.852 350.43 241.023C351.977 239.148 352.75 237.203 352.75 235.188V229.141C352.75 226.938 351.766 225.133 349.797 223.727C347.828 222.32 345.227 221.242 341.992 220.492C338.758 219.695 335.055 219.156 330.883 218.875C326.758 218.594 322.516 218.453 318.156 218.453ZM290.594 201.016C293.5 201.578 296.805 201.953 300.508 202.141C304.258 202.328 308.5 202.422 313.234 202.422C317.312 202.422 321.367 202.281 325.398 202C329.43 201.672 333.062 201.156 336.297 200.453C339.531 199.703 342.156 198.719 344.172 197.5C346.188 196.234 347.219 194.641 347.266 192.719V188.219C347.266 186.203 346.773 184.281 345.789 182.453C344.852 180.578 343.258 178.938 341.008 177.531C338.805 176.125 335.898 175 332.289 174.156C328.68 173.312 324.25 172.891 319 172.891C314.734 172.891 311.031 173.031 307.891 173.312C304.75 173.547 302.055 173.852 299.805 174.227C297.555 174.602 295.68 175 294.18 175.422C292.727 175.844 291.531 176.219 290.594 176.547V201.016Z" stroke="#FFFCFC" stroke-opacity="0.76" stroke-width="7"/>
+          <path d="M172.094 162C179.312 162 186.93 162.258 194.945 162.773C203.008 163.289 211.469 164.297 220.328 165.797V183.656C216.391 182.531 212.406 181.617 208.375 180.914C204.344 180.164 200.289 179.578 196.211 179.156C192.18 178.734 188.148 178.43 184.117 178.242C180.086 178.055 176.078 177.938 172.094 177.891C170.172 177.891 168.039 177.938 165.695 178.031C163.398 178.078 160.914 178.172 158.242 178.312C155.617 178.453 152.875 178.664 150.016 178.945C147.156 179.227 144.25 179.578 141.297 180V205.594H202.75V222.891H141.297V269.016H124V165.797C132.766 164.297 141.18 163.289 149.242 162.773C157.352 162.258 164.969 162 172.094 162Z" stroke="#FFFCFC" stroke-opacity="0.96" stroke-width="7"/>
+          <path d="M464.656 236.863L269.788 17.3414C253.675 -0.809884 225.325 -0.809879 209.212 17.3414L14.3437 236.863C-8.84685 262.988 9.69918 304.25 44.6318 304.25H434.368C469.301 304.25 487.847 262.988 464.656 236.863ZM215.195 22.6524C228.125 8.08648 250.875 8.08648 263.805 22.6524L458.674 242.174C477.283 263.138 462.401 296.25 434.368 296.25H44.6318C16.5994 296.25 1.71682 263.138 20.3265 242.174L215.195 22.6524Z" stroke="#FFFDFD" stroke-width="7"/>
+        </svg>
+        <nav>
+          <ul class='nav-items'>
+            <li><a id='nav-item' class='about-me-link' href='#'>About</a></li>
+            <li><a id='nav-item' class='skills-link' href='#'>Skills</a></li>
+            <li><a id='nav-item' class='work-experience-link' href='#'>Experience</a></li>
+            <li><a id='nav-item' class='hobbies-link' href='#'>Hobbies</a></li>
+            <li><a id='nav-item-resume' data-page='Resume' href='#'>Resume</a></li>
+          </ul>
+          <div class='burger'>
+            <div class='line1'></div>
+            <div class='line2'></div>
+            <div class='line3'></div>
+          </div>
+        </nav>
+      </header>
+      <div class='share'>
+        <ul class='social-links'>
+          <li>
+            <a 
+              class='linkedin-icon' 
+              href='https://www.linkedin.com/in/farhad-bahrehmand/' 
+              target='_blank'
+            >
+              <i class="fa fa-linkedin tooltip" aria-hidden="true">
+                <span class="tooltiptext">Linkedin</span>
+              </i>
+            </a>
+          </li>
+          <li>
+            <a 
+              class='github-icon' 
+              href='https://github.com/farhadbahrehmandhenry' 
+              target='_blank'
+            >
+              <i class="fa fa-github tooltip" aria-hidden="true">
+                <span class="tooltiptext">Github</span>
+              </i>
+            </a>
+          </li>
+          <li class='email tooltip' data-clipboard-text="fbahrehmand82@gmail.com">fbahrehmand82@gmail.com
+            <span class="tooltiptext">copied</span>
+          </li>
+        </ul>
+        <div class='toggle-share'></div>
+      </div>
+      <section class="landing-page">
+        <div class='landing-paragraphs'>
+          <p class="hi">Hi, my name is:</p>
+          <p class="name">Farhad Bahrehmand</p>
+          <p class="info">I'm a software engineer and a computer science student based in Seattle, WA. my passion is to learn new skills and build things.</p>
+        </div>
+      </section>
+      <section class="about-me">
+        <h1 class="ml9">
+          <span class="text-wrapper">
+            <span class="letters">About Me</span>
+          </span>
+        </h1>
+        <div class='about-me-container'>
+          <div class='about-me-paragraphs'>
+            <p>I started software engineering journey <span class='start-date'></span> days ago.</p>
+            <p>I'm also a student in Application Development program at North Seattle College, pursuing my bachlore degree.</p>
+            <p>Art and learning new skills are my passion, and my goal is to develop my knowledge of coding in order to built artistic products.  </p>
+          </div>
+          <img class='about-me-image' src='./asset/about.jpg' alt='my-face'/>
+        </div>
+      </section>
+      <section class="skills">
+        <h1 class="ml9">
+          <span class="text-wrapper">
+            <span class="letters">Technical Skills</span>
+          </span>
+        </h1>
+        <div class="tabbed">
+          <input type="radio" name="tabs" id="tab-nav-1" checked>
+          <label for="tab-nav-1">Languages</label>
+          <input type="radio" name="tabs" id="tab-nav-2">
+          <label for="tab-nav-2">Tools</label>
+          <input type="radio" name="tabs" id="tab-nav-3">
+          <label for="tab-nav-3">Libraries</label>
+          <input type="radio" name="tabs" id="tab-nav-4">
+          <label for="tab-nav-4">Experience</label>
+          <div class="tabs">
+            <div>
+              <h2>Languages</h2>
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Tools</h2>
+              <ul>
+                <li>Android Studio</li>
+                <li>Adobe Photoshop</li>
+                <li>MySQL</li>
+                <li>GitHub</li>
+                <li>MySQL</li>
+                <li>npm</li>
+                <li>Microsoft Project</li>
+                <li>Postman</li>
+                <li>Postman</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Libraries</h2>
+              <ul>
+                <li>Node.js</li> 
+                <li>React</li>
+                <li>Redux</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>REST APIs</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>lodash</li>
+                <li>moment</li>
+                <li>aws-sdk</li>
+                <li>axios</li>
+                <li>Mocha</li>
+                <li>Jasmine</li>
+                <li>Jest</li>
+                <li>Enzyme</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Experience</h2>
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Heroku</li>
+                <li>Firebase</li>
+                <li>AWS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work-experience">
+        <h1 class="ml9">
+          <span class="text-wrapper">
+            <span class="letters">Coding Experience</span>
+          </span>
+        </h1>
+        <div class='experience-info'>
+          <h4>Software Engineer @ Symbolic Frameworks</h4>
+          <p>OCT 2018 - SEP 2020</p>
+          <ul>
+            <li>Add features and components to the applications using HTML, CSS, Sass, JavaScript, and jQuery</li>
+            <li>Test the applications and resolve all the possible bugs</li>
+            <li>Maintainable the applications and write code using different languages, platforms, frameworks</li>
+          </ul>
+        </div>
+      </section>
+      <section class="hobbies">
+        <h1 class="ml9">
+          <span class="text-wrapper">
+            <span class="letters">Hobbies</span>
+          </span>
+        </h1>
+        <div class="habbies-tabbed">
+          <input type="radio" name="habbies-tabs" id="habbies-tab-nav-1" checked>
+          <label for="habbies-tab-nav-1">Drawing</label>
+          <input type="radio" name="habbies-tabs" id="habbies-tab-nav-2">
+          <label for="habbies-tab-nav-2">Fine Woodworking</label>
+          <input type="radio" name="habbies-tabs" id="habbies-tab-nav-3">
+          <label for="habbies-tab-nav-3">Music</label>
+          <div class="habbies-tabs">
+            <div>
+              <h2>Drawing</h2>
+              <div class="slideshow-container-drawing">
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">1 / 8</div>
+                  <img src="./asset/drawing/01.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">2 / 8</div>
+                  <img src="./asset/drawing/02.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">3 / 8</div>
+                  <img src="./asset/drawing/03.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">4 / 8</div>
+                  <img src="./asset/drawing/04.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">5 / 8</div>
+                  <img src="./asset/drawing/05.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">6 / 8</div>
+                  <img src="./asset/drawing/06.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">7 / 8</div>
+                  <img src="./asset/drawing/07.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-drawing fade">
+                  <div class="numbertext-drawing">8 / 8</div>
+                  <img src="./asset/drawing/08.jpg" style="width:100%">
+                </div>
+                <a class="prev-drawing">&#10094;</a>
+                <a class="next-drawing">&#10095;</a>
+              </div>
+              <br>
+              <div style="text-align:center">
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+                <span class="dot-drawing"></span>
+              </div>
+            </div>
+            <div>
+              <h2>Fine Woodworking</h2>
+              <div class="slideshow-container-wood">
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">1 / 9</div>
+                  <img src="./asset/fineWoodWorking/01.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">2 / 9</div>
+                  <img src="./asset/fineWoodWorking/02.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">3 / 9</div>
+                  <img src="./asset/fineWoodWorking/03.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">4 / 9</div>
+                  <img src="./asset/fineWoodWorking/04.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">5 / 9</div>
+                  <img src="./asset/fineWoodWorking/05.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">6 / 9</div>
+                  <img src="./asset/fineWoodWorking/06.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">7 / 9</div>
+                  <img src="./asset/fineWoodWorking/07.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">8 / 9</div>
+                  <img src="./asset/fineWoodWorking/08.jpg" style="width:100%">
+                </div>
+                <div class="mySlides-wood fade">
+                  <div class="numbertext-wood">9 / 9</div>
+                  <img src="./asset/fineWoodWorking/09.jpg" style="width:100%">
+                </div>
+                <a class="prev-wood">&#10094;</a>
+                <a class="next-wood">&#10095;</a>
+              </div>
+              <br>
+              <div style="text-align:center">
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+                <span class="dot-wood"></span>
+              </div>
+            </div>
+            <div>
+              <h2>Music</h2>
+              <div class='music-content'>
+                <img class='kamancheh' src='./asset/music/01.jpg'>
+                <p>I love music. some times in my free time I play Kamanche, a pesian classic musical instrument. here is how it sounds- this is a folk song played by Velshodegan band.</p>
+                <div class="container">
+                  <audio src="./asset/music/01.mp3" id="song" ></audio>
+                  <img src="./asset/music/play.png" id="play-pause" />
+                  <input type="range" id="progress-bar" min="0" max="" value="0" class="progress-bar"/>
+                  <div class="currentTime"></div>
+                  <div class="durationTime"></div>
+                  <img src="./asset/music/unmute.png" id="mute-unmute" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
     <script src="./node_modules/clipboard/dist/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type='text/javascript'>
-      $(() => $('.header').load('./htmls/header.html'));
-      $(() => $('.share').load('./htmls/share.html'));
-      $(() => $('.landing-page').load('./htmls/landing-page.html'));
-      $(() => $('.about-me').load('./htmls/about-me-page.html'));
-      $(() => $('.skills').load('./htmls/skills-page.html'));
-      $(() => $('.work-experience').load('./htmls/work-experience-page.html'));
-      $(() => $('.hobbies').load('./htmls/hobbies-page.html'));
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script type="module" src="./javascripts/index.js"></script>
