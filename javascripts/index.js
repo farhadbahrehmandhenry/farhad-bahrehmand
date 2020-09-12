@@ -26,6 +26,12 @@ $(window).load(function() {
     var hobbies = document.querySelector('.hobbies-link');
     var navLogo = document.querySelector('#nav-logo');
     var email = document.querySelector('.email');
+    var prevBtn = document.querySelector('.prev-drawing');
+    var nextBtn = document.querySelector('.next-drawing');
+    var dotDrawing = document.querySelectorAll('.dot-drawing')
+    var prevBtnWood = document.querySelector('.prev-wood');
+    var nextBtnWood = document.querySelector('.next-wood');
+    var dotWood = document.querySelectorAll('.dot-wood')
     var pages = [aboutPage, skillsPage, experiencePage, hobbiesPage, landingPage];
     
     var links = [
@@ -103,9 +109,9 @@ $(window).load(function() {
           body.style.overflowY = 'scroll';
         }
 
-        if (socialLinks.classList.contains('active')) {
+        if (socialLinks.classList.contains('active-share')) {
           share.classList.remove('active');
-          socialLinks.classList.remove('active');
+          socialLinks.classList.remove('active-share');
         }
       });
     });
@@ -125,7 +131,7 @@ $(window).load(function() {
     //< share links toggle
     toggleShare.addEventListener('click', () => {
       share.classList.toggle('active');
-      socialLinks.classList.toggle('active');
+      socialLinks.classList.toggle('active-share');
     });
     //>
 
@@ -151,9 +157,9 @@ $(window).load(function() {
       .add({
         targets: '.ml9 .letter',
         scale: [0, 1],
-        duration: 1500,
-        elasticity: 600,
-        delay: (el, i) => 45 * (i+1)
+        duration: 2000,
+        elasticity: 500,
+        delay: (el, i) => 20 * (i+1)
       }).add({});
     }
     //>
@@ -172,9 +178,167 @@ $(window).load(function() {
       }, 1000);
     });
 
-    clipboard.on('error', function(e) {
+    clipboard.on('error', (e) => {
         console.log(e);
     });
     //>
+
+    //< slideshow drawing
+
+    prevBtn.addEventListener('click', () => {
+      plusSlides(-1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      plusSlides(1);
+    });
+
+    dotDrawing.forEach((dot, index) => {
+      dot.addEventListener('click', () => currentSlideDrawing(index + 1));
+    });
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlideDrawing(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides-drawing");
+      var dots = document.getElementsByClassName("dot-drawing");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    //>
+
+    //< slideshow woodworking
+    prevBtnWood.addEventListener('click', () => {
+      plusSlidesWood(-1);
+    });
+
+    nextBtnWood.addEventListener('click', () => {
+      plusSlidesWood(1);
+    });
+
+    dotWood.forEach((dot, index) => {
+      dot.addEventListener('click', () => currentSlideWood(index + 1));
+    });
+
+    var slideIndex = 1;
+    showSlidesWood(slideIndex);
+    
+    // Next/previous controls
+    function plusSlidesWood(n) {
+      showSlidesWood(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlideWood(n) {
+      showSlidesWood(slideIndex = n);
+    }
+    
+    function showSlidesWood(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides-wood");
+      var dots = document.getElementsByClassName("dot-wood");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    //>
+
+    //< player
+    var song = document.querySelector('#song');
+    var progressBar = document.querySelector('#progress-bar');
+    var pPause = document.querySelector('#play-pause');
+    var muteUnmute = document.querySelector('#mute-unmute');
+
+    pPause.addEventListener('click', () => playPause());
+
+    var playing = true;
+
+    function playPause() {
+      if (playing) {
+        pPause.src = "./asset/music/pause.png"
+        
+        song.play();
+
+        playing = false;
+      } 
+      else {
+        pPause.src = "./asset/music/play.png"
+        
+        song.pause();
+
+        playing = true;
+      }
+    }
+    
+    song.addEventListener('ended', () => {
+    });
+    
+    function updateProgressValue() {
+        progressBar.max = song.duration;
+        progressBar.value = song.currentTime;
+        document.querySelector('.currentTime').innerHTML = (formatTime(Math.floor(song.currentTime)));
+        if (document.querySelector('.durationTime').innerHTML === "NaN:NaN") {
+            document.querySelector('.durationTime').innerHTML = "0:00";
+        } else {
+            document.querySelector('.durationTime').innerHTML = (formatTime(Math.floor(song.duration)));
+        }
+    };
+    
+    function formatTime(seconds) {
+        let min = Math.floor((seconds / 60));
+        let sec = Math.floor(seconds - (min * 60));
+        if (sec < 10){ 
+            sec  = `0${sec}`;
+        };
+        return `${min}:${sec}`;
+    };
+
+    setInterval(updateProgressValue, 500);
+    
+    progressBar.addEventListener('change', () => {
+      song.currentTime = progressBar.value;
+    });
+
+    muteUnmute.addEventListener('click', () => {
+      console.log(song)
+      if (song.muted) {
+        song.muted = false;
+        muteUnmute.src = "./asset/music/unmute.png";
+      }
+      else if (!song.muted) {
+        muteUnmute.src = "./asset/music/mute.png";
+        song.muted = true;
+      }
+    });
+    //>
+
   }, 3000);
 });

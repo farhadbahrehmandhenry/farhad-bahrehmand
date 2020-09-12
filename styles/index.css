@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #300407;
+  font-family: 'Pangolin', cursive;
+  letter-spacing: 0.1rem;
+}
+
+.main-container {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+}
+
+.burger {
+  margin: 1rem;
+  margin-left: 0;
+  display: none;
+}
+
+.burger div {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: white;
+  margin: 0.3rem;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+  padding-top: 8rem;
+}
+
+.skills {
+  padding-top: 15rem;
+}
+
+.hobbies {
+  padding-top: 4rem;
+  height: auto;
+}
+
+.work-experience {
+  padding-bottom: 15rem;
+}
+
+@media only screen and (max-width: 1250px) {
+  .hobbies {
+    padding-top: 6rem;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .hobbies {
+    padding-top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .hobbies {
+    padding-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
