@@ -61,6 +61,8 @@ $(window).load(function() {
       'hobbies': '#F26419', 
     };
 
+    // var vh = window.innerHeight * 0.01;
+    // sections.forEach(section => section.style.setProperty('--vh', `${vh}px`))
 
     mainContainer.style.display = 'flex';
 
@@ -90,6 +92,8 @@ $(window).load(function() {
         burger.classList.remove('toggle');
         body.style.overflowY = 'scroll';
       }
+
+      // sections.forEach(section => section.style.setProperty('--vh', `${vh}px`))
     });
     //>
 
