@@ -9,6 +9,8 @@
 .landing-paragraphs {
   padding-top: 10rem;
   padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .hi, .name, .info {
@@ -46,8 +48,9 @@
 
 @media only screen and (max-width: 1000px) {
   .landing-paragraphs {
-    padding-left: 5rem;
+    padding-left: 0.5rem;
     width: 80%;
+    justify-content: flex-start;
   }
   .name {
     font-size: 3rem;
@@ -55,7 +58,7 @@
 
   .hi, .name, .info {
     position: relative;
-    left: 4rem;
+    left: 1rem;
   }
 }
 
