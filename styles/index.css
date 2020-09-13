@@ -30,10 +30,10 @@ body {
 }
 
 .burger div {
-  width: 3rem;
-  height: 0.3rem;
+  width: 2.5rem;
+  height: 0.2rem;
   background-color: black;
-  margin: 0.4rem;
+  margin: 0.3rem;
   transition: all 0.3s ease;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-10px, 11px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
