@@ -7,11 +7,10 @@
 }
 
 .ml9 {
-  position: relative;
-  font-weight: 900;
-  font-size: 1.5em;
-  opacity: 0.7;
-  padding-top: 2rem;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ml9 .text-wrapper {
@@ -21,17 +20,25 @@
   padding-right: 0.05em;
   padding-bottom: 0.1em;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-.ml9 .letter {
+.ml9 .letters {
   transform-origin: 50% 100%;
   display: inline-block;
   line-height: 1em;
+  font-size: 1.5rem;
 }
 
 .experience-info {
   margin-top: 2rem;
-  width: 40rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .experience-info ul{
@@ -49,9 +56,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .experience-info, .work-experience .ml9 {
+  .experience-info {
     width: 100%;
-    margin-left: 6rem;
+    padding-left: 1.5rem;
+  }
+
+  .work-experience .ml9 {
+    width: 100%;
   }
 
   .work-experience {
@@ -60,11 +71,11 @@
     padding-top: 3rem;
   }
 
-  .experience-info ul li{
+  /* .experience-info ul li{
     max-width: 80%;
   }
 
   .experience-info h4, .experience-info p {
     max-width: 80%;
-  }
+  } */
 }
