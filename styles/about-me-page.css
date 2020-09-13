@@ -56,7 +56,7 @@
   padding: 1rem;
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 1000px) {
   .about-me-container {
     flex-direction: column;
     justify-content: center;

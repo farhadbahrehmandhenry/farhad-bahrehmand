@@ -20,7 +20,7 @@
   animation: header-logo 2s ease;
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 1000px) {
   .header {
     position: fixed;
   }
