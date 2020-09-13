@@ -32,7 +32,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   animation: landingPageName 2s ease forwards 0.6;
-  min-width: 18rem;
+  min-width: 80%;
 
 }
 
@@ -47,6 +47,7 @@
 @media only screen and (max-width: 1000px) {
   .landing-paragraphs {
     padding-left: 5rem;
+    width: 80%;
   }
   .name {
     font-size: 3rem;
