@@ -25,9 +25,8 @@ body {
   display: none;
   z-index: 10;
   cursor: pointer;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-
+  padding: 1rem;
+  padding-right: 2rem;
 }
 
 .burger div {
@@ -41,6 +40,9 @@ body {
 .toggle {
   padding: 0.5rem;
   margin-top: 0.5rem;
+  margin-right: 3.5rem;
+  margin-top: 1.75rem;
+
   z-index: 10;
 }
 
