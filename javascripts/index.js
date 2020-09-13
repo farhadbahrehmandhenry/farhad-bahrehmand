@@ -82,7 +82,6 @@ $(window).load(function() {
         }
       });
     }
-    console.log(window.innerWidth)
 
     if (window.innerWidth > 1000) {
       sections.forEach(section => observer.observe(section));
