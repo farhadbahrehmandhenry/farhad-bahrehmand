@@ -82,8 +82,11 @@ $(window).load(function() {
         }
       });
     }
+    console.log(window.innerWidth)
 
-    sections.forEach(section => observer.observe(section));
+    if (window.innerWidth > 1000) {
+      sections.forEach(section => observer.observe(section));
+    }
     //>
 
     //< return to default mobile navbar  
