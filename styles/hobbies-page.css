@@ -230,6 +230,10 @@
   .slideshow-container-wood img{
     height: 60%;
   }
+
+  .prev-drawing, .next-drawing, .prev-wood, .next-wood {
+    margin-top: -2rem;
+  }
 }
 
 @media (max-width: 600px) {

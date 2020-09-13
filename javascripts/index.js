@@ -65,6 +65,7 @@ $(window).load(function() {
     // sections.forEach(section => section.style.setProperty('--vh', `${vh}px`))
 
     mainContainer.style.display = 'flex';
+    toggleShare.style.backgroundColor = shareToggleColors['landing-page'];
 
     //< change the color of header and share dynamically
     var options = {threshold: 0.9};
