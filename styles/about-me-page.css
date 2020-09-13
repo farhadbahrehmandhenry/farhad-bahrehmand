@@ -57,6 +57,12 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .about-me {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+  }
+
   .about-me-container {
     flex-direction: column;
     justify-content: center;

@@ -105,10 +105,21 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .tabbed { width: 400px }
+  .skills {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+  }
+
+  .tabbed { 
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+  }
+
   .tabbed > label { display: none }
   .tabs > div {
-    width: 25rem;
+    width: 20rem;
     border: none;
     padding: 0;
     opacity: 0.8;
@@ -126,11 +137,7 @@
 }
 
 @media screen and (max-width: 750px) {
-  .tabbed {
-    width: 100%;
-    margin-left: 8rem;
-  }
   .tabs > div {
-    width: 90%;
+    width: 80%;
   }
 }

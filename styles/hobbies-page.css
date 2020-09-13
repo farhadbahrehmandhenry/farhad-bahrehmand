@@ -197,20 +197,11 @@
   margin-top: 1rem;
 }
 
-@media screen and (max-width: 1150px) {
-  .habbies-tabbed {
-    width: 45rem;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .habbies-tabbed {
-    width: 40rem;
-  }
-}
-@media screen and (max-width: 950px) {
-  .habbies-tabbed {
-    width: 35rem;
+@media screen and (max-width: 1000px) {
+  .hobbies {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
   }
 }
 
