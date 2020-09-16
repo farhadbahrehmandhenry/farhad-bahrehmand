@@ -150,6 +150,16 @@
   visibility: visible;
 }
 
+@media only screen and (max-width: 1000px) {
+  .share.active {
+    width: 80%;
+  }
+
+  .email {
+    display: none;
+  }
+}
+
 @keyframes shareFadeIn {
   0%{
     opacity: 0;

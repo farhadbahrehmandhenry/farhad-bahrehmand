@@ -126,8 +126,12 @@
   }
 
   .tabbed > label { display: none }
+
+  .tabs {
+    width: 100%;
+  }
   .tabs > div {
-    width: 20rem;
+    width: 100%;
     border: none;
     padding: 0;
     opacity: 0.8;
@@ -141,6 +145,14 @@
     border-bottom: 2px solid #4F2D4A;
     padding-bottom: .5em;
     display: block;
+  }
+
+  .tabs > div ul li {
+    font-size: 0.8rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    width: 100%;
+
   }
 }
 
