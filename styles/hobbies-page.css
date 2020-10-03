@@ -67,11 +67,11 @@
 }
 
 .slideshow-container-drawing img{
-  height: 35rem;
+  height: 60%;
 }
 
 .slideshow-container-wood img{
-  height: 35rem;
+  height: 60%;
 }
 
 .habbies-tabs > div h2{
@@ -207,6 +207,20 @@
   margin-top: 1rem;
 }
 
+.slideshow-container-drawing, .slideshow-container-wood {
+  height: 20rem;
+  width: 30rem;
+}
+
+.slideshow-container-drawing img{
+  height: 20rem;
+}
+
+.slideshow-container-wood img{
+  height: 20rem;
+  width
+}
+
 @media screen and (max-width: 1000px) {
   .hobbies {
     padding-left: 2rem;
@@ -214,21 +228,21 @@
     padding-top: 3rem;
   }
   .habbies-tabbed {
-    width: 80%;
+    width: 60%;
     min-width: 25rem;
     height: 15rem;
   }
 
   .slideshow-container-drawing, .slideshow-container-wood {
-    height: 60%;
+    height: 40%;
   }
 
   .slideshow-container-drawing img{
-    height: 60%;
+    height: 40%;
   }
   
   .slideshow-container-wood img{
-    height: 60%;
+    height: 40%;
   }
 
   .prev-drawing, .next-drawing, .prev-wood, .next-wood {
