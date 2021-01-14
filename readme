@@ -1,2 +1,1 @@
-heroku git:remote -a farhadbahrehmand
-git push heroku master
+// git push heroku master
